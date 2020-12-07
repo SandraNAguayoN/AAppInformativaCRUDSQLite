@@ -1,6 +1,5 @@
 package mx.edu.utng.appinformativa;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-//import mx.edu.utng.apprecyclergds0243.dummy.DummyContent.DummyItem;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
@@ -21,7 +20,7 @@ import java.util.List;
  */
 public class MyNoticiaRecyclerViewAdapter extends RecyclerView.Adapter<MyNoticiaRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Noticia> mValues;
+    private final List<Noticia> mValues; //Lista de valores de noticia
     private Context contexto;
     //Método constructor de la clase
 
@@ -58,7 +57,6 @@ public class MyNoticiaRecyclerViewAdapter extends RecyclerView.Adapter<MyNoticia
     public int getItemCount() {
         return mValues.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView; //Hace referencia al constraint layout
         public final TextView tvNombre;
@@ -74,7 +72,6 @@ public class MyNoticiaRecyclerViewAdapter extends RecyclerView.Adapter<MyNoticia
             tvDescripcion = (TextView) view.findViewById(R.id.tvDescripcion);
             ivPhoto = (ImageView)view.findViewById(R.id.ivPhoto);
             rbValoracion = (RatingBar)view.findViewById(R.id.rbValoracion);
-
         }
 
         @Override

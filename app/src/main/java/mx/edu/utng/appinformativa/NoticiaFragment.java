@@ -4,32 +4,30 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import static mx.edu.utng.appinformativa.MyOpenHelper.tabla;
 
-//import mx.edu.utng.apprecyclergds0243.dummy.DummyContent;
-
 /**
  * A fragment representing a list of Items.
  */
+
 public class NoticiaFragment extends Fragment {
 
     //Declaraciones:
     RecyclerView recyclerView;
-    List<Noticia> noticiaList;  //Lista de Peliculas en estreno
+    List<Noticia> noticiaList;  //Lista de las noticias
     MyNoticiaRecyclerViewAdapter adapterNoticias;
 
     // TODO: Customize parameter argument names
@@ -67,7 +65,6 @@ public class NoticiaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_noticia_list, container, false);
-
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
@@ -80,8 +77,8 @@ public class NoticiaFragment extends Fragment {
 
             try {
                 MyOpenHelper dbHelper = new MyOpenHelper(getContext());
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                String consultaSQL = "SELECT * FROM "+tabla;
+                SQLiteDatabase db = dbHelper.getWritableDatabase(); //Conecta a la BD para acceder a sus datos
+                String consultaSQL = "SELECT * FROM " + tabla; //Realiza consulta a la tabla Noticia
 
                 Cursor resultado = db.rawQuery(consultaSQL, null);
                 noticiaList = new ArrayList<>();  //Estructura de datos
@@ -99,22 +96,11 @@ public class NoticiaFragment extends Fragment {
 
             }
 
-
-            //Datos
-            /*
-            restauranteList.add(new Restaurante("Pizzeria Marchelos","https://cdn.kiwilimon.com/recetaimagen/13003/5707.jpg", 4.0f,"Tlaxcala #49"));
-            restauranteList.add(new Restaurante("Pollo Feliz","https://www.pollofelizpuebla.com/images/logo.png",3.5f,"José Alfredo #3"));
-            restauranteList.add(new Restaurante("Pollo Sabroso","https://thumbs.dreamstime.com/z/pollo-sabroso-hecho-en-casa-del-rotisserie-la-placa-blanca-vista-lateral-primer-140690225.jpg",5.0f,"Michoacan #65"));
-            */
             //Se asocia el adaptador al RecyclerView
             adapterNoticias = new MyNoticiaRecyclerViewAdapter(getActivity(), noticiaList);
             recyclerView.setAdapter(adapterNoticias);
-
-
-            //recyclerView.setAdapter(new MyRestauranteRecyclerViewAdapter(DummyContent.ITEMS));
+            //recyclerView.setAdapter(new MyNoticiaRecyclerViewAdapter(DummyContent.ITEMS));
         }
         return view;
     }
-
-
 }

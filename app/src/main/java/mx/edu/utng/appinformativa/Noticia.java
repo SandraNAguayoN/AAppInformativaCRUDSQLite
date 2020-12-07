@@ -2,11 +2,9 @@ package mx.edu.utng.appinformativa;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
-
 public class Noticia {
     //Clase POJO Objeto simple de Java
     @PrimaryKey
@@ -16,6 +14,7 @@ public class Noticia {
     private float valoracion;
     private String descripcion;
 
+    //Constructor con los parametros de la clase Noticia
     public Noticia(String nombre, String urlPhoto, float valoracion, String descripcion) {
         this.nombre = nombre;
         this.urlPhoto = urlPhoto;
@@ -23,6 +22,7 @@ public class Noticia {
         this.descripcion = descripcion;
     }
 
+    //Métodos getter y setter de todos los parámetros de la clase
     public String getNombre() {
         return nombre;
     }

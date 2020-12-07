@@ -1,7 +1,5 @@
 package mx.edu.utng.appinformativa;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static mx.edu.utng.appinformativa.MyOpenHelper.tabla;
 
@@ -34,12 +34,12 @@ public class NuevaNoticiaActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 MyOpenHelper dbHelper = new MyOpenHelper(NuevaNoticiaActivity.this);
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                SQLiteDatabase db = dbHelper.getWritableDatabase(); //Conecta a la BD para acceder a sus datos
 
-                if (db != null) {
+                if (db != null) { //Elaúa si la BD no esta vacía
                     // Hacer las operaciones que queramos sobre la base de datos
                     ContentValues cv = new ContentValues();
-                    cv.put("nombre", etNombre.getText().toString());
+                    cv.put("nombre", etNombre.getText().toString()); //Inserta el valor del EditText a la columna "nombre"
                     cv.put("photo", etPhoto.getText().toString());
                     cv.put("valoracion", rbValoracion.getRating());
                     cv.put("descripcion", etDescripcion.getText().toString());
@@ -62,6 +62,7 @@ public class NuevaNoticiaActivity extends AppCompatActivity {
             }
         });
 
+        //Metodo que se dispara al dar clic en btnRegresar y realiza intent hacia la vista de ListaNoticiaActivity
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
