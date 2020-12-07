@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".NoticiaActivity">
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="528dp"
+        android:text="@string/tituloNoticias"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="277dp"
+        android:layout_height="194dp"
+        android:layout_marginBottom="96dp"
+        android:gravity="center"
+        android:text="¡Bienvenido(a)\n En este espacio encontrarás información de tu interes,
+        incluso te permite crear tu propio contenido para que los demas usuarios puedan verlo.
+        \nComienza a explorar o crear. \n ¡Mucha suerte!"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="166dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="332dp"
+        android:src="@drawable/welcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnComezar"
+        android:layout_width="235dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/pinkstrong"
+        android:onClick="noticias"
+        android:text="¡Comenzar ya!"
+        android:textColor="@color/neutro"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

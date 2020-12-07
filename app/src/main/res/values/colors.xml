@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#77A6F9</color>
+    <color name="colorPrimaryDark">#8FB6F9</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="botonInicio">#B5F9FF</color>
+    <color name="fondo">#FEE5FF</color>
+    <color name="fondo2">#FDDEFF</color>
+    <color name="textoInicio">#9877F9</color>
+    <color name="textoCategorias">#FFFFFF</color>
+    <color name="fondoLogin">#FFF0DF</color>
+    <color name="botonLogin">#99C2BE</color>
+
+    <color name="pinkmedium">#FF95E5</color>
+    <color name="blueclear">#7BD3FF</color>
+    <color name="greenlemon">#A9FF7B</color>
+    <color name="lili">#CA92FF</color>
+
+    <color name="r1">#FFC0EE</color>
+    <color name="r2">#FF95E2</color>
+    <color name="r3">#FF6CD7</color>
+    <color name="r4">#FF32C7</color>
+
+    <color name="a1">#B3EFF2</color>
+    <color name="a2">#77D4FF</color>
+    <color name="a3">#2DBDFF</color>
+    <color name="a4">#00A5F0</color>
+
+    <color name="pu1">#D0AFFF</color>
+    <color name="pu2">#B682FF</color>
+    <color name="pu3">#964BFF</color>
+    <color name="pu4">#6F1FDF</color>
+
+    <color name="v1">#B0FFD6</color>
+    <color name="v2">#6EFFB4</color>
+    <color name="v3">#40FF9C</color>
+    <color name="v4">#15DE76</color>
+
+    <color name="neutro">#FFFFFF</color>
+    <color name="golden">#FFD900</color>
+    <color name="grey">#D8D8D8</color>
+    <color name="pink">#FFB7E1</color>
+    <color name="pinkstrong">#FF82E4</color>
+    <color name="yellowlight">#FFF889</color>
+    <color name="bluenavy">#80A4D7</color>
+    <color name="red">#EA0000</color>
+    <color name="black">#000000</color>
+    <color name="redlight">#FF7676</color>
+    <color name="greenlight">#94FF8B</color>
+    <color name="orangelight">#FFC598</color>
+    <color name="cyan">#98FFE0</color>
+
+</resources>
